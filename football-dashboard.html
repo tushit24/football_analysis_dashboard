@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Football Prediction Platform</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#071022;--panel:#0e1b36;--panel2:#13244a;--line:#233559;--tx:#eef3f8;--mut:#8fa1c0;--g:#19c37d;--g2:#0f8f5c;--gold:#f6c744;--red:#ef5b5b;--club:#e4202c}
+:root:not([data-theme="dark"]){}
+@media (prefers-color-scheme:light){:root:not([data-theme="dark"]){--bg:#eef2f7;--panel:#fff;--panel2:#e8eef7;--line:#d5deea;--tx:#0b1a33;--mut:#5b6b86}}
+:root[data-theme="light"]{--bg:#eef2f7;--panel:#fff;--panel2:#e8eef7;--line:#d5deea;--tx:#0b1a33;--mut:#5b6b86}
+*{box-sizing:border-box;margin:0}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--tx);font:15px/1.5 'DM Sans',system-ui,sans-serif;min-height:100vh}
+h1,h2,h3,.num{font-family:'Barlow Condensed','Arial Narrow',sans-serif;letter-spacing:.01em}
+button,select,input{font:inherit;color:inherit}button{cursor:pointer}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.app{display:grid;grid-template-columns:230px 1fr;min-height:100vh}
+.side{background:linear-gradient(180deg,#0a1a3a,#060d1e);border-right:1px solid var(--line);padding:22px 14px;display:flex;flex-direction:column;gap:6px;position:sticky;top:0;height:100vh;color:#eef3f8}
+.brand{font:800 26px/1 'Barlow Condensed';padding:4px 8px 18px}.brand small{display:block;font:500 12px 'DM Sans';color:#8fa1c0;margin-top:4px}
+.crest{display:grid;place-items:center;border-radius:50%;font:800 15px 'Barlow Condensed';color:#fff;flex:none;background:var(--c);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25)}
+.club-chip{display:flex;gap:10px;align-items:center;padding:10px 8px;margin-bottom:10px;border-bottom:1px solid #233559;font-weight:700}
+.nav{display:flex;gap:10px;align-items:center;padding:11px 12px;border-radius:10px;background:none;border:0;color:#a9b8d3;text-align:left;width:100%;transition:.2s}
+.nav:hover{background:#13244a}.nav.on{background:var(--g);color:#04200f;font-weight:700}
+main{padding:26px clamp(16px,3vw,40px) 60px;min-width:0;position:relative}
+.glow{position:absolute;inset:0 0 auto 0;height:340px;background:radial-gradient(60% 100% at 70% 0,color-mix(in srgb,var(--club) 35%,transparent),transparent 70%);pointer-events:none;transition:background .6s}
+.wrap{position:relative;max-width:1100px;margin:auto}
+h1{font-size:clamp(34px,5vw,54px);line-height:1;font-weight:800}h2{font-size:24px;font-weight:700}
+.sub{color:var(--mut);margin:6px 0 22px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}
+.grid{display:grid;gap:16px}.g2{grid-template-columns:1.1fr 1fr}.g3{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.team{padding:18px 10px;border:1px solid var(--line);background:var(--panel);border-radius:14px;display:flex;flex-direction:column;align-items:center;gap:8px;font-weight:700;transition:.2s}
+.team:hover{transform:translateY(-3px);border-color:var(--c)}.team.on{border-color:var(--g);box-shadow:0 0 0 2px var(--g),0 10px 30px -10px var(--g)}
+.btn{background:var(--g);color:#04200f;border:0;border-radius:12px;padding:13px 18px;font-weight:700;width:100%;transition:.2s}.btn:hover{filter:brightness(1.1)}
+.field{display:flex;flex-direction:column;gap:5px;font-size:13px;color:var(--mut)}
+select,input{background:var(--panel2);border:1px solid var(--line);border-radius:10px;padding:11px;width:100%;color:var(--tx)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
+.seg{display:inline-flex;background:var(--panel2);border-radius:10px;padding:3px;margin-bottom:14px}.seg button{border:0;background:none;padding:8px 22px;border-radius:8px;color:var(--mut)}.seg .on{background:var(--g);color:#04200f;font-weight:700}
+.hero{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin-bottom:20px}
+.meta{display:flex;gap:22px;flex-wrap:wrap;margin-left:auto;color:var(--mut);font-size:13px}.meta b{display:block;color:var(--tx);font-size:15px}
+.pitch{width:100%;max-width:440px;display:block;margin:auto;border-radius:12px}
+.dot{transition:.5s}.dot text{font:700 3.3px 'DM Sans';fill:#fff;text-anchor:middle;paint-order:stroke;stroke:#0a3a22;stroke-width:.7px}
+table{width:100%;border-collapse:collapse}th{font-weight:500;color:var(--mut);text-align:left;font-size:12px;padding:6px 8px}td{padding:9px 8px;border-top:1px solid var(--line)}
+td.n,th.n{text-align:right}tr.me td{background:color-mix(in srgb,var(--g) 18%,transparent);font-weight:700}
+.bar{height:9px;border-radius:9px;background:var(--panel2);overflow:hidden}.bar i{display:block;height:100%;background:var(--g);width:0;transition:width .9s cubic-bezier(.2,.8,.2,1)}
+.prob{display:flex;height:46px;border-radius:12px;overflow:hidden;font:700 22px/46px 'Barlow Condensed';text-align:center;margin:12px 0}
+.prob div{transition:flex .9s cubic-bezier(.2,.8,.2,1);min-width:0;overflow:hidden;color:#fff}
+.big{font:800 64px/1 'Barlow Condensed'}.lbl{display:flex;justify-content:space-between;font-size:13px;margin:10px 0 4px}
+.ring{--p:0;width:130px;height:130px;border-radius:50%;background:conic-gradient(var(--g) calc(var(--p)*1%),var(--panel2) 0);display:grid;place-items:center;transition:.3s}
+.ring div{width:104px;height:104px;border-radius:50%;background:var(--panel);display:grid;place-items:center;font:800 40px 'Barlow Condensed'}
+.tag{display:inline-block;padding:3px 10px;border-radius:99px;font-size:12px;font-weight:700;background:color-mix(in srgb,var(--g) 22%,transparent);color:var(--g)}
+.demo{font-size:12px;color:var(--mut)}.view{display:none}.view.on{display:block;animation:in .4s}
+@keyframes in{from{opacity:0;transform:translateY(8px)}}
+@media(max-width:820px){.app{grid-template-columns:1fr}.side{position:fixed;bottom:0;left:0;right:0;top:auto;height:auto;flex-direction:row;padding:6px 6px calc(6px + env(safe-area-inset-bottom,0px));z-index:9;justify-content:space-around}.brand,.club-chip{display:none}.nav{flex-direction:column;gap:2px;font-size:11px;text-align:center;padding:8px 4px}.g2{grid-template-columns:1fr}main{padding-bottom:90px}.meta{margin-left:0}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+.sc{overflow-x:auto}
+</style></head><body>
+<div class="app">
+<aside class="side"><div class="brand">PREMIER<br>PREDICTOR<small>Decision support system</small></div>
+<div class="club-chip" id="chip"></div>
+<button class="nav" data-v="club">◎ <span>Club</span></button>
+<button class="nav" data-v="match">⚽ <span>Match predictor</span></button>
+<button class="nav" data-v="season">▥ <span>Season predictor</span></button>
+<button class="nav" data-v="transfer">⇄ <span>Transfer fit</span></button>
+<button class="nav" data-v="pick" style="margin-top:auto">☰ <span>Change club</span></button></aside>
+<main><div class="glow"></div><div class="wrap">
+
+<section class="view" id="pick"><h1>Your club.<br>Your season.</h1><p class="sub">Choose a team to explore. Demo data, not real predictions.</p>
+<input id="q" placeholder="Search Premier League teams" aria-label="Search teams" style="margin-bottom:16px">
+<div class="grid g3" id="teams"></div><button class="btn" id="go" style="margin-top:18px;max-width:420px"></button></section>
+
+<section class="view" id="club"><div class="hero" id="hero"></div>
+<div class="grid g2"><div class="card"><h2>Predicted starting XI</h2><p class="demo" id="form"></p><svg class="pitch" id="pitch" viewBox="0 0 100 130"></svg></div>
+<div class="card"><h2>Key squad players</h2><table id="squad"></table></div></div></section>
+
+<section class="view" id="match"><h1>Match predictor</h1><p class="sub">Pick two clubs and their managers to see win, draw and loss odds.</p>
+<div class="grid g2"><div class="card"><div class="seg" id="side"><button class="on">Home</button><button>Away</button></div>
+<div class="row"><label class="field">Home team<select id="mh"></select></label><label class="field">Away team<select id="ma"></select></label></div>
+<div class="row"><label class="field">Home manager<select id="mgh"></select></label><label class="field">Away manager<select id="mga"></select></label></div>
+<button class="btn" id="pm">Predict outcome</button></div>
+<div class="card"><h2>Predicted result</h2><div class="prob" id="prob"></div><div id="pl" class="lbl"></div>
+<h3 style="margin-top:18px">What drives it</h3><div id="why"></div><p class="demo" style="margin-top:10px">Illustrative model: rating gap plus home advantage.</p></div></div></section>
+
+<section class="view" id="season"><h1>Season predictor</h1><p class="sub">Simulates 38 games for every club, 800 times.</p>
+<div class="card"><div class="row" style="grid-template-columns:1fr 1fr auto;align-items:end"><label class="field">Team<select id="st"></select></label><label class="field">Manager<select id="sm"></select></label><button class="btn" id="gs" style="width:auto">Generate table</button></div>
+<div id="sres"></div></div></section>
+
+<section class="view" id="transfer"><h1>Transfer suitability</h1><p class="sub">Check how well a player fits your club's playing style.</p>
+<div class="grid g2"><div class="card"><div class="row"><label class="field">Player<select id="tp"></select></label><label class="field">Manager<select id="tm"></select></label></div><button class="btn" id="tc">Check suitability</button></div>
+<div class="card" id="tres"></div></div></section>
+</div></main></div>
+<script>
+// ---- Data layer: swap these mocks for real endpoints later (POST /predict/match, /predict/season, /predict/transfer)
+const API={base:null, async post(p,b){ if(!this.base) return null; const r=await fetch(this.base+p,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}); return r.json(); }};
+const T={Arsenal:['ARS',90,'#e4202c','Mikel Arteta','Emirates Stadium'],'Man City':['MCI',92,'#6cabdd','Pep Guardiola','Etihad Stadium'],Liverpool:['LIV',88,'#c8102e','Jürgen Klopp','Anfield'],'Aston Villa':['AVL',80,'#7a003c','Unai Emery','Villa Park'],Tottenham:['TOT',79,'#1c2a6b','Ange Postecoglou','Tottenham Hotspur Stadium'],Newcastle:['NEW',78,'#241f20','Eddie Howe','St James\' Park'],Chelsea:['CHE',77,'#034694','Mauricio Pochettino','Stamford Bridge'],'Man Utd':['MUN',74,'#da291c','Erik ten Hag','Old Trafford'],Brighton:['BHA',71,'#0057b8','Roberto De Zerbi','Amex Stadium'],'West Ham':['WHU',70,'#7a263a','David Moyes','London Stadium'],'Crystal Palace':['CRY',68,'#1b458f','Roy Hodgson','Selhurst Park'],Bournemouth:['BOU',66,'#b50e12','Andoni Iraola','Vitality Stadium'],Fulham:['FUL',65,'#444','Marco Silva','Craven Cottage'],Brentford:['BRE',65,'#e30613','Thomas Frank','Gtech Community'],Wolves:['WOL',64,'#c58b00','Gary O\'Neil','Molineux'],Everton:['EVE',62,'#003399','Sean Dyche','Goodison Park'],Forest:['NFO',61,'#c8102e','Nuno Espírito Santo','City Ground'],Luton:['LUT',52,'#f78f1e','Rob Edwards','Kenilworth Road'],Burnley:['BUR',50,'#6c1d45','Vincent Kompany','Turf Moor'],'Sheffield Utd':['SHU',48,'#ee2737','Chris Wilder','Bramall Lane']};
+const MGR={};Object.entries(T).forEach(([k,v])=>MGR[v[3]]=null);
+const STYLE={'Mikel Arteta':[85,90,80,82,60],'Pep Guardiola':[82,96,75,90,55],'Jürgen Klopp':[95,80,82,85,62],'Mauricio Pochettino':[86,80,78,78,65],'Ange Postecoglou':[90,85,60,88,55],'Eddie Howe':[84,78,82,76,66],'Unai Emery':[78,82,85,80,64]};
+const sty=m=>STYLE[m]||[70,70,70,70,60];
+const ATT=['Pressing','Passing','Defensive work','Progression','Aerial'];
+const XI={Arsenal:['Raya','Zinchenko','Gabriel','Saliba','White','Rice','Ødegaard','Partey','Martinelli','Havertz','Saka'],Liverpool:['Alisson','Robertson','Van Dijk','Konaté','Alexander-Arnold','Mac Allister','Szoboszlai','Endo','Díaz','Núñez','Salah'],'Man City':['Ederson','Gvardiol','Dias','Akanji','Walker','Rodri','De Bruyne','Bernardo','Foden','Haaland','Grealish']};
+const POS=[[50,118],[16,98],[38,102],[62,102],[84,98],[50,80],[30,62],[70,62],[18,30],[50,22],[82,30]];
+const SQ={Arsenal:[['Bukayo Saka','RW','ENG'],['Martin Ødegaard','CM','NOR'],['Declan Rice','DM','ENG'],['William Saliba','CB','FRA'],['David Raya','GK','ESP']],Liverpool:[['Mohamed Salah','RW','EGY'],['Virgil van Dijk','CB','NED'],['Alexis Mac Allister','CM','ARG'],['Trent Alexander-Arnold','RB','ENG'],['Alisson','GK','BRA']],'Man City':[['Erling Haaland','ST','NOR'],['Rodri','DM','ESP'],['Phil Foden','RW','ENG'],['Kevin De Bruyne','CM','BEL'],['Ederson','GK','BRA']]};
+const PL={'Bruno Guimarães':['Midfielder','Newcastle',[78,86,80,84,55]],'Declan Rice':['Midfielder','Arsenal',[74,82,92,78,70]],Rodri:['Midfielder','Man City',[70,93,88,85,68]],'Alexis Mac Allister':['Midfielder','Liverpool',[80,88,78,82,50]],'Moisés Caicedo':['Midfielder','Chelsea',[88,76,90,72,60]]};
+let club='Arsenal';const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+const crest=(n,s=40)=>`<span class="crest" style="--c:${T[n][2]};width:${s}px;height:${s}px;font-size:${s*.36}px">${T[n][0]}</span>`;
+const opt=(a,sel)=>a.map(x=>`<option${x==sel?' selected':''}>${x}</option>`).join('');
+const names=Object.keys(T),mgrs=Object.values(T).map(v=>v[3]);
+
+function show(v){$$('.view').forEach(e=>e.classList.toggle('on',e.id==v));$$('.nav').forEach(b=>b.classList.toggle('on',b.dataset.v==v));scrollTo(0,0);
+ if(v=='club')renderClub();if(v=='match')predict();if(v=='transfer')fit();}
+function setClub(c){club=c;document.documentElement.style.setProperty('--club',T[c][2]);
+ $('#chip').innerHTML=crest(c,34)+c;$('#go').textContent='Continue with '+c+' →';
+ ['#mh','#st'].forEach(s=>$(s).value=c);$('#mgh').value=T[c][3];$('#sm').value=T[c][3];$('#tm').value=T[c][3];$$('#teams .team').forEach(e=>e.classList.toggle('on',e.dataset.n==c));}
+function drawTeams(){const f=$('#q').value.toLowerCase();$('#teams').innerHTML=names.filter(n=>n.toLowerCase().includes(f)).map(n=>`<button class="team" data-n="${n}" style="--c:${T[n][2]}">${crest(n,54)}${n}</button>`).join('');
+ $$('#teams .team').forEach(b=>{b.onclick=()=>setClub(b.dataset.n);b.classList.toggle('on',b.dataset.n==club)});}
+function renderClub(){const t=T[club];
+ $('#hero').innerHTML=crest(club,84)+`<div><h1>${club}</h1><span class="demo">Club overview · 2023–24 demo</span></div><div class="meta"><span>Manager<b>${t[3]}</b></span><span>Ground<b>${t[4]}</b></span><span>Formation<b>4-3-3</b></span><span>Strength<b>${t[1]}/100</b></span></div>`;
+ const xi=XI[club];$('#form').textContent=xi?'Illustrative lineup':'Lineup data arrives with the backend. Showing positions only.';
+ const roles=['GK','LB','CB','CB','RB','DM','CM','CM','LW','ST','RW'];
+ let s=`<defs><pattern id="st" width="100" height="26" patternUnits="userSpaceOnUse"><rect width="100" height="13" fill="#1f9a57"/><rect y="13" width="100" height="13" fill="#1a8c4f"/></pattern></defs><rect width="100" height="130" fill="url(#st)"/><g fill="none" stroke="#ffffff99" stroke-width=".5"><rect x="3" y="3" width="94" height="124"/><path d="M3 65H97"/><circle cx="50" cy="65" r="10"/><rect x="25" y="3" width="50" height="18"/><rect x="25" y="109" width="50" height="18"/></g>`;
+ POS.forEach((p,i)=>s+=`<g class="dot" style="transform:translate(${p[0]}px,${p[1]}px)"><circle r="3.4" fill="${T[club][2]}" stroke="#fff" stroke-width=".7"/><text y="7">${xi?xi[i]:roles[i]}</text></g>`);
+ $('#pitch').innerHTML=s;
+ const sq=SQ[club]||[];$('#squad').innerHTML='<tr><th>Player<th>Pos<th>Nation</tr>'+(sq.length?sq.map(p=>`<tr><td>${p[0]}<td>${p[1]}<td>${p[2]}</tr>`).join(''):'<tr><td colspan=3 class="demo">Squad data arrives with the backend.</tr>');}
+function probs(h,a){const d=(T[h][1]+4-T[a][1])/9,p=1/(1+Math.exp(-d)),dr=.3*Math.exp(-d*d/5);return[p*(1-dr),dr,(1-p)*(1-dr)];}
+function predict(){let h=$('#mh').value,a=$('#ma').value;
+ const[p,d,q]=probs(h,a).map(x=>Math.round(x*100));
+ $('#prob').innerHTML=`<div style="flex:${p};background:${T[h][2]}">${p}%</div><div style="flex:${d};background:#7d8aa5">${d}%</div><div style="flex:${q};background:${T[a][2]}">${q}%</div>`;
+ $('#pl').innerHTML=`<span>${h} win</span><span>Draw</span><span>${a} win</span>`;
+ const sh=sty($('#mgh').value),sa=sty($('#mga').value),f=[['Strength gap',(T[h][1]-T[a][1])/20],['Home advantage',.35],['Pressing vs press resistance',(sh[0]-sa[1]+8)/40],['Tactical style gap',(sh[3]-sa[3])/25]];
+ $('#why').innerHTML=f.map(([n,v])=>`<div class="lbl"><span>${n}</span><span>${v>=0?'favours '+h:'favours '+a}</span></div><div class="bar"><i style="width:${Math.min(100,Math.abs(v)*100)}%;background:${v>=0?T[h][2]:T[a][2]}"></i></div>`).join('');
+ requestAnimationFrame(()=>$$('#why i').forEach(e=>{const w=e.style.width;e.style.width=0;requestAnimationFrame(()=>e.style.width=w)}));}
+function season(){const c=$('#st').value,N=names.length,S=800,pts=Array(N).fill(0),top=Array(N).fill(0),t4=Array(N).fill(0),rel=Array(N).fill(0);
+ const P=names.map(h=>names.map(a=>h==a?null:probs(h,a)));
+ for(let s=0;s<S;s++){const r=Array(N).fill(0);for(let i=0;i<N;i++)for(let j=0;j<N;j++){if(i==j)continue;const[p,d]=P[i][j],x=Math.random();if(x<p)r[i]+=3;else if(x<p+d){r[i]++;r[j]++}else r[j]+=3;}
+  r.forEach((v,i)=>pts[i]+=v);const o=r.map((v,i)=>[v+Math.random()*.5,i]).sort((a,b)=>b[0]-a[0]);top[o[0][1]]++;o.slice(0,4).forEach(x=>t4[x[1]]++);o.slice(-3).forEach(x=>rel[x[1]]++);}
+ const rows=names.map((n,i)=>({n,p:pts[i]/S,t:top[i]/S*100,f:t4[i]/S*100,r:rel[i]/S*100})).sort((a,b)=>b.p-a.p);
+ const pos=rows.findIndex(r=>r.n==c)+1;
+ $('#sres').innerHTML=`<div style="margin:16px 0"><span class="tag">${c}: ${pos}${['st','nd','rd'][pos-1]||'th'} · ${Math.round(rows[pos-1].p)} pts</span> <span class="demo">Demo simulation</span></div><div class="sc"><table><tr><th>#<th>Club<th class="n">Pts<th class="n">Title %<th class="n">Top 4 %<th class="n">Drop %</tr>`+rows.map((r,i)=>`<tr class="${r.n==c?'me':''}"><td>${i+1}<td><span style="display:inline-flex;gap:8px;align-items:center">${crest(r.n,24)}${r.n}</span><td class="n">${Math.round(r.p)}<td class="n">${r.t.toFixed(0)}<td class="n">${r.f.toFixed(0)}<td class="n">${r.r.toFixed(0)}</tr>`).join('')+'</table></div>';}
+function fit(){const pn=$('#tp').value,pl=PL[pn],ms=sty($('#tm').value),m=$('#tm').value,v=pl[2];
+ const d=Math.sqrt(v.reduce((a,x,i)=>a+(x-ms[i])**2,0)/5),sc=Math.max(30,Math.round(100-d*2.4)),
+ diff=v.map((x,i)=>[ATT[i],x-ms[i],x]).sort((a,b)=>b[1]-a[1]);
+ $('#tres').innerHTML=`<div style="display:flex;gap:20px;align-items:center;flex-wrap:wrap"><div class="ring" style="--p:${sc}"><div>${sc}</div></div><div><h2>${pn}</h2><div class="demo">${pl[0]} · ${pl[1]}</div><span class="tag" style="margin-top:8px">${sc>=85?'Strong fit':sc>=70?'Good fit':'Needs adapting'}</span></div></div>
+ <h3 style="margin:18px 0 4px">Tactical fit with ${m}</h3>`+v.map((x,i)=>`<div class="lbl"><span>${ATT[i]}</span><span>${x} vs style ${ms[i]}</span></div><div class="bar"><i style="width:${x}%"></i></div>`).join('')+`<p style="margin-top:14px"><b>Strongest:</b> ${diff[0][0]} · <b>Watch:</b> ${diff[diff.length-1][0]}</p><p class="demo">Illustrative scores. The backend will use player vectors and cosine similarity.</p>`;
+ requestAnimationFrame(()=>$$('#tres .bar i').forEach(e=>{const w=e.style.width;e.style.width=0;requestAnimationFrame(()=>e.style.width=w)}));}
+// init
+['#mh','#ma','#st'].forEach(s=>$(s).innerHTML=opt(names));['#mgh','#mga','#sm','#tm'].forEach(s=>$(s).innerHTML=opt(mgrs));
+$('#ma').value='Chelsea';$('#mga').value=T.Chelsea[3];$('#tp').innerHTML=opt(Object.keys(PL));
+$('#mh').onchange=()=>{$('#mgh').value=T[$('#mh').value][3]};$('#ma').onchange=()=>{$('#mga').value=T[$('#ma').value][3]};
+$('#st').onchange=()=>{$('#sm').value=T[$('#st').value][3]};
+$('#side').onclick=e=>{if(e.target.tagName!='BUTTON'||e.target.classList.contains('on'))return;$$('#side button').forEach(b=>b.classList.toggle('on',b==e.target));
+ const h=$('#mh').value,a=$('#ma').value,hm=$('#mgh').value,am=$('#mga').value;$('#mh').value=a;$('#ma').value=h;$('#mgh').value=am;$('#mga').value=hm;predict();};
+$('#pm').onclick=predict;$('#gs').onclick=season;$('#tc').onclick=fit;$('#q').oninput=drawTeams;$('#go').onclick=()=>show('club');
+$$('.nav').forEach(b=>b.onclick=()=>show(b.dataset.v));
+drawTeams();setClub('Arsenal');show('pick');
+</script></body></html>

@@ -1,0 +1,545 @@
+[
+  {
+    "id": "bruno-guimaraes",
+    "name": "Bruno Guimarães",
+    "age": 26,
+    "position": "DM",
+    "primaryRole": "Defensive Midfielder / Deep Playmaker",
+    "club": "Newcastle United",
+    "league": "Premier League",
+    "nationality": "Brazil",
+    "nationCode": "BRA",
+    "marketValue": 65,
+    "experienceYears": 6,
+    "isHomegrown": false,
+    "styleVector": [88, 92, 84, 91, 58],
+    "keyStrengths": [
+      "Elite press resistance under high pressure",
+      "Line-breaking progressive passing (93rd percentile)",
+      "Relentless ground duel competitiveness"
+    ],
+    "mainConcerns": [
+      "Frequent yellow card accumulation",
+      "Moderate aerial duel win rate (58%)"
+    ]
+  },
+  {
+    "id": "moises-caicedo",
+    "name": "Moisés Caicedo",
+    "age": 22,
+    "position": "DM",
+    "primaryRole": "Ball-Winning Midfielder",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "nationality": "Ecuador",
+    "nationCode": "ECU",
+    "marketValue": 60,
+    "experienceYears": 3,
+    "isHomegrown": false,
+    "styleVector": [90, 80, 92, 79, 64],
+    "keyStrengths": [
+      "Dominant tackle and interception anticipation",
+      "Exceptional recovery sprint pace in transitions",
+      "Consistent short-to-mid range circulation"
+    ],
+    "mainConcerns": [
+      "Occasional aggressive fouls in defensive third",
+      "Less creative in high-block attacking overloads"
+    ]
+  },
+  {
+    "id": "martin-zubimendi",
+    "name": "Martín Zubimendi",
+    "age": 25,
+    "position": "DM",
+    "primaryRole": "Single Pivot Regista",
+    "club": "Real Sociedad",
+    "league": "La Liga",
+    "nationality": "Spain",
+    "nationCode": "ESP",
+    "marketValue": 50,
+    "experienceYears": 5,
+    "isHomegrown": false,
+    "styleVector": [82, 94, 82, 88, 70],
+    "keyStrengths": [
+      "Masterful spatial orientation and tempo dictation",
+      "Superb pass accuracy under first-phase press (91%)",
+      "Surprising aerial positioning balance"
+    ],
+    "mainConcerns": [
+      "Not an explosive dynamic runner in open field transitions",
+      "Prefers settled structural possession"
+    ]
+  },
+  {
+    "id": "amadou-onana",
+    "name": "Amadou Onana",
+    "age": 22,
+    "position": "DM",
+    "primaryRole": "Physical Anchor Midfielder",
+    "club": "Everton",
+    "league": "Premier League",
+    "nationality": "Belgium",
+    "nationCode": "BEL",
+    "marketValue": 45,
+    "experienceYears": 3,
+    "isHomegrown": false,
+    "styleVector": [84, 74, 88, 76, 92],
+    "keyStrengths": [
+      "Colossal aerial duel presence (92% win rate)",
+      "High ground coverage and box-to-box stride power",
+      "Defensive set-piece clearance anchor"
+    ],
+    "mainConcerns": [
+      "Needs refinement in tight half-space pass execution",
+      "Higher ball retention variance under counter-press"
+    ]
+  },
+  {
+    "id": "joao-palhinha",
+    "name": "João Palhinha",
+    "age": 28,
+    "position": "DM",
+    "primaryRole": "Pure Destroyer",
+    "club": "Fulham",
+    "league": "Premier League",
+    "nationality": "Portugal",
+    "nationCode": "POR",
+    "marketValue": 55,
+    "experienceYears": 8,
+    "isHomegrown": false,
+    "styleVector": [80, 68, 96, 65, 88],
+    "keyStrengths": [
+      "Premier League leader in tackles won per 90 (4.6)",
+      "Elite penalty box screening presence",
+      "Commanding aerial dominance"
+    ],
+    "mainConcerns": [
+      "Limited progressive pass volume in build-up",
+      "Age profile (28) exceeds younger development criteria"
+    ]
+  },
+  {
+    "id": "adam-wharton",
+    "name": "Adam Wharton",
+    "age": 20,
+    "position": "DM",
+    "primaryRole": "Progressive Deep Controller",
+    "club": "Crystal Palace",
+    "league": "Premier League",
+    "nationality": "England",
+    "nationCode": "ENG",
+    "marketValue": 42,
+    "experienceYears": 2,
+    "isHomegrown": true,
+    "styleVector": [86, 91, 78, 89, 52],
+    "keyStrengths": [
+      "First-time forward passing vision between lines",
+      "Quick scanning and press evasion",
+      "Qualifies as valuable Premier League homegrown talent"
+    ],
+    "mainConcerns": [
+      "Developing physical upper body strength for duel collisions",
+      "Requires cover behind him against direct long balls"
+    ]
+  },
+  {
+    "id": "declan-rice",
+    "name": "Declan Rice",
+    "age": 25,
+    "position": "DM",
+    "primaryRole": "Complete Dynamic Midfielder",
+    "club": "Arsenal",
+    "league": "Premier League",
+    "nationality": "England",
+    "nationCode": "ENG",
+    "marketValue": 95,
+    "experienceYears": 7,
+    "isHomegrown": true,
+    "styleVector": [88, 86, 94, 88, 78],
+    "keyStrengths": [
+      "World-class interception timing and duel winning",
+      "Powerful carrying through midfield lines",
+      "Deadly set-piece delivery"
+    ],
+    "mainConcerns": ["Top-tier market valuation (£95M+)"]
+  },
+  {
+    "id": "rodri",
+    "name": "Rodri",
+    "age": 28,
+    "position": "DM",
+    "primaryRole": "Elite Controller & Anchor",
+    "club": "Man City",
+    "league": "Premier League",
+    "nationality": "Spain",
+    "nationCode": "ESP",
+    "marketValue": 110,
+    "experienceYears": 9,
+    "isHomegrown": false,
+    "styleVector": [85, 96, 92, 90, 82],
+    "keyStrengths": [
+      "Flawless 360-degree game management",
+      "Clutch edge-of-box finishing",
+      "Aerial and positional dominance"
+    ],
+    "mainConcerns": ["Untouchable valuation (£110M+)"]
+  },
+  {
+    "id": "alexis-mac-allister",
+    "name": "Alexis Mac Allister",
+    "age": 25,
+    "position": "CM",
+    "primaryRole": "Tactical Playmaker & Second Pivot",
+    "club": "Liverpool",
+    "league": "Premier League",
+    "nationality": "Argentina",
+    "nationCode": "ARG",
+    "marketValue": 70,
+    "experienceYears": 5,
+    "isHomegrown": false,
+    "styleVector": [88, 92, 80, 86, 52],
+    "keyStrengths": [
+      "High-pressure press resistance",
+      "Slick combination play in tight spaces",
+      "High defensive work ethic"
+    ],
+    "mainConcerns": ["Not a specialist physical solitary number 6"]
+  },
+  {
+    "id": "douglas-luiz",
+    "name": "Douglas Luiz",
+    "age": 26,
+    "position": "CM",
+    "primaryRole": "Box-to-Box Playmaker",
+    "club": "Aston Villa",
+    "league": "Premier League",
+    "nationality": "Brazil",
+    "nationCode": "BRA",
+    "marketValue": 55,
+    "experienceYears": 6,
+    "isHomegrown": false,
+    "styleVector": [82, 89, 78, 85, 62],
+    "keyStrengths": [
+      "Elite set-piece threat and corners",
+      "Progressive passing into final third",
+      "Calm penalty execution"
+    ],
+    "mainConcerns": ["Can get isolated against high-speed central counters"]
+  },
+  {
+    "id": "mats-wieffer",
+    "name": "Mats Wieffer",
+    "age": 24,
+    "position": "DM",
+    "primaryRole": "Tactical Interceptor",
+    "club": "Brighton",
+    "league": "Premier League",
+    "nationality": "Netherlands",
+    "nationCode": "NED",
+    "marketValue": 35,
+    "experienceYears": 3,
+    "isHomegrown": false,
+    "styleVector": [84, 82, 85, 78, 84],
+    "keyStrengths": [
+      "Very high reading of opponent passing lanes",
+      "Strong aerial clearance capabilities (84)",
+      "High team press trigger awareness"
+    ],
+    "mainConcerns": ["Transitioning to maximum Premier League speed tempo"]
+  },
+  {
+    "id": "youssouf-fofana",
+    "name": "Youssouf Fofana",
+    "age": 25,
+    "position": "CM",
+    "primaryRole": "Physical Box-to-Box Engine",
+    "club": "AC Milan",
+    "league": "Serie A",
+    "nationality": "France",
+    "nationCode": "FRA",
+    "marketValue": 32,
+    "experienceYears": 5,
+    "isHomegrown": false,
+    "styleVector": [87, 81, 84, 82, 75],
+    "keyStrengths": [
+      "Tenacious ground duel winning",
+      "High stamina engine covering half spaces",
+      "Efficient ball recovery to immediate forward pass"
+    ],
+    "mainConcerns": ["Can rush final passes when fatigued"]
+  },
+  {
+    "id": "pedro-neto",
+    "name": "Pedro Neto",
+    "age": 24,
+    "position": "RW",
+    "primaryRole": "Direct Dynamic Winger",
+    "club": "Chelsea",
+    "league": "Premier League",
+    "nationality": "Portugal",
+    "nationCode": "POR",
+    "marketValue": 55,
+    "experienceYears": 5,
+    "isHomegrown": false,
+    "styleVector": [88, 80, 52, 94, 45],
+    "keyStrengths": [
+      "Blistering 1v1 dribble take-on speed",
+      "Dangerous crossing delivery on the run",
+      "High transition counter-attack outlet"
+    ],
+    "mainConcerns": ["Injury history management", "Low aerial utility"]
+  },
+  {
+    "id": "michael-olise",
+    "name": "Michael Olise",
+    "age": 22,
+    "position": "RW",
+    "primaryRole": "Inverted Playmaking Winger",
+    "club": "Bayern Munich",
+    "league": "Bundesliga",
+    "nationality": "France",
+    "nationCode": "FRA",
+    "marketValue": 65,
+    "experienceYears": 4,
+    "isHomegrown": true,
+    "styleVector": [82, 92, 58, 93, 50],
+    "keyStrengths": [
+      "World-class left foot curling crosses and shots",
+      "Exceptional key pass chance creation per 90",
+      "Press-resistant receiving in wide half spaces"
+    ],
+    "mainConcerns": ["Moderate defensive track-back volume"]
+  },
+  {
+    "id": "nico-williams",
+    "name": "Nico Williams",
+    "age": 22,
+    "position": "LW",
+    "primaryRole": "Two-Footed Explosive Winger",
+    "club": "Athletic Bilbao",
+    "league": "La Liga",
+    "nationality": "Spain",
+    "nationCode": "ESP",
+    "marketValue": 60,
+    "experienceYears": 4,
+    "isHomegrown": false,
+    "styleVector": [91, 81, 55, 96, 48],
+    "keyStrengths": [
+      "Unplayable acceleration from static start",
+      "Two-footed threat beating defenders inside or outside",
+      "Relentless counter-press pressing intensity"
+    ],
+    "mainConcerns": ["High wage demands and release clause terms"]
+  },
+  {
+    "id": "anthony-gordon",
+    "name": "Anthony Gordon",
+    "age": 23,
+    "position": "LW",
+    "primaryRole": "High-Intensity Direct Winger",
+    "club": "Newcastle United",
+    "league": "Premier League",
+    "nationality": "England",
+    "nationCode": "ENG",
+    "marketValue": 55,
+    "experienceYears": 4,
+    "isHomegrown": true,
+    "styleVector": [94, 78, 65, 90, 56],
+    "keyStrengths": [
+      "One of the league's most intense frontline pressers",
+      "Direct vertical penalty box penetration",
+      "Draws high foul and penalty counts"
+    ],
+    "mainConcerns": ["High emotional intensity on pitch"]
+  },
+  {
+    "id": "viktor-gyokeres",
+    "name": "Viktor Gyökeres",
+    "age": 26,
+    "position": "ST",
+    "primaryRole": "Complete Power Striker",
+    "club": "Sporting CP",
+    "league": "Liga Portugal",
+    "nationality": "Sweden",
+    "nationCode": "SWE",
+    "marketValue": 65,
+    "experienceYears": 6,
+    "isHomegrown": false,
+    "styleVector": [89, 76, 62, 92, 85],
+    "keyStrengths": [
+      "Immense channel-running power and physical bullies defenders",
+      "Clinical high-volume shooting and box conversions",
+      "Dynamic transition spearhead"
+    ],
+    "mainConcerns": ["High release clause valuation (£70M+)"]
+  },
+  {
+    "id": "benjamin-sesko",
+    "name": "Benjamin Šeško",
+    "age": 21,
+    "position": "ST",
+    "primaryRole": "Modern Athletic Target Forward",
+    "club": "RB Leipzig",
+    "league": "Bundesliga",
+    "nationality": "Slovenia",
+    "nationCode": "SVN",
+    "marketValue": 50,
+    "experienceYears": 3,
+    "isHomegrown": false,
+    "styleVector": [84, 72, 58, 86, 92],
+    "keyStrengths": [
+      "Elite aerial dominance (6ft 5in with massive leap)",
+      "Terrifying top sprint speed (35.5 km/h)",
+      "High development ceiling for elite manager mold"
+    ],
+    "mainConcerns": ["Needs consistency over full 90-minute stretches"]
+  },
+  {
+    "id": "alexander-isak",
+    "name": "Alexander Isak",
+    "age": 24,
+    "position": "ST",
+    "primaryRole": "Silky Technical Striker",
+    "club": "Newcastle United",
+    "league": "Premier League",
+    "nationality": "Sweden",
+    "nationCode": "SWE",
+    "marketValue": 80,
+    "experienceYears": 6,
+    "isHomegrown": false,
+    "styleVector": [85, 84, 52, 93, 76],
+    "keyStrengths": [
+      "Henry-esque composure cutting inside from left channel",
+      "Silky close control in packed penalty boxes",
+      "High xG conversion rate"
+    ],
+    "mainConcerns": ["Premium valuation and Newcastle reluctance to sell"]
+  },
+  {
+    "id": "jarrad-branthwaite",
+    "name": "Jarrad Branthwaite",
+    "age": 22,
+    "position": "CB",
+    "primaryRole": "Left-Footed Dominant Center-Back",
+    "club": "Everton",
+    "league": "Premier League",
+    "nationality": "England",
+    "nationCode": "ENG",
+    "marketValue": 55,
+    "experienceYears": 3,
+    "isHomegrown": true,
+    "styleVector": [80, 82, 92, 80, 90],
+    "keyStrengths": [
+      "Rare two-footed left-sided center-back profile",
+      "Exceptional recovery pace to defend high lines",
+      "Dominant box defending and aerial clearances"
+    ],
+    "mainConcerns": ["Requires sustained high-volume possession experience"]
+  },
+  {
+    "id": "murillo",
+    "name": "Murillo",
+    "age": 22,
+    "position": "CB",
+    "primaryRole": "Aggressive Ball-Playing Stopper",
+    "club": "Nottingham Forest",
+    "league": "Premier League",
+    "nationality": "Brazil",
+    "nationCode": "BRA",
+    "marketValue": 40,
+    "experienceYears": 2,
+    "isHomegrown": false,
+    "styleVector": [82, 88, 88, 86, 78],
+    "keyStrengths": [
+      "Stunning 60-yard diagonal switches and driven passes",
+      "Combative physical sliding and recovery blocks",
+      "Tremendous technical confidence stepping out"
+    ],
+    "mainConcerns": ["Can commit rashly stepping out of the defensive backline"]
+  },
+  {
+    "id": "micky-van-de-ven",
+    "name": "Micky van de Ven",
+    "age": 23,
+    "position": "CB",
+    "primaryRole": "Speed Recovery Specialist",
+    "club": "Tottenham",
+    "league": "Premier League",
+    "nationality": "Netherlands",
+    "nationCode": "NED",
+    "marketValue": 58,
+    "experienceYears": 4,
+    "isHomegrown": false,
+    "styleVector": [86, 81, 89, 87, 80],
+    "keyStrengths": [
+      "Fastest recorded sprint speed in Premier League history (37.38 km/h)",
+      "Allows team to play ultra-high 50-meter defensive line",
+      "Clean slide recovery tackles"
+    ],
+    "mainConcerns": ["Hamstring load monitoring required"]
+  },
+  {
+    "id": "jeremie-frimpong",
+    "name": "Jeremie Frimpong",
+    "age": 23,
+    "position": "RB",
+    "primaryRole": "Inverted / Wing-Back Speedster",
+    "club": "Bayer Leverkusen",
+    "league": "Bundesliga",
+    "nationality": "Netherlands",
+    "nationCode": "NED",
+    "marketValue": 45,
+    "experienceYears": 5,
+    "isHomegrown": true,
+    "styleVector": [90, 82, 60, 95, 38],
+    "keyStrengths": [
+      "Devastating attacking box penetration and goal contributions",
+      "Unrelenting stamina overlapping on right wing",
+      "Manchester City academy homegrown status"
+    ],
+    "mainConcerns": ["Lacks height and defensive heading in a traditional back 4"]
+  },
+  {
+    "id": "rayan-ait-nouri",
+    "name": "Rayan Aït-Nouri",
+    "age": 23,
+    "position": "LB",
+    "primaryRole": "Inverted Technical Left-Back",
+    "club": "Wolves",
+    "league": "Premier League",
+    "nationality": "Algeria",
+    "nationCode": "ALG",
+    "marketValue": 38,
+    "experienceYears": 4,
+    "isHomegrown": false,
+    "styleVector": [84, 86, 75, 92, 54],
+    "keyStrengths": [
+      "One of the best dribbling press-resistant full-backs in Europe",
+      "Smooth inverted midfield progression",
+      "Sharp combination triangles in half spaces"
+    ],
+    "mainConcerns": ["Can get caught out of defensive position on direct back-post crosses"]
+  },
+  {
+    "id": "archie-gray",
+    "name": "Archie Gray",
+    "age": 18,
+    "position": "DM",
+    "primaryRole": "Versatile Academy Prodigy",
+    "club": "Tottenham",
+    "league": "Premier League",
+    "nationality": "England",
+    "nationCode": "ENG",
+    "marketValue": 30,
+    "experienceYears": 1,
+    "isHomegrown": true,
+    "styleVector": [82, 85, 78, 84, 60],
+    "keyStrengths": [
+      "Immense tactical maturity for teenage age bracket",
+      "Can comfortably play inverted right-back or central midfield",
+      "Clean first touch and technical discipline"
+    ],
+    "mainConcerns": ["Early stage in physical development"]
+  }
+]

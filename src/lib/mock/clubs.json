@@ -1,0 +1,280 @@
+{
+  "Arsenal": {
+    "name": "Arsenal",
+    "code": "ARS",
+    "strength": 90,
+    "color": "#e4202c",
+    "manager": "Mikel Arteta",
+    "stadium": "Emirates Stadium",
+    "formation": "4-3-3",
+    "lineup": ["Raya", "Zinchenko", "Gabriel", "Saliba", "White", "Rice", "Ødegaard", "Partey", "Martinelli", "Havertz", "Saka"],
+    "styleVector": [85, 90, 80, 82, 60],
+    "squad": [
+      { "name": "Bukayo Saka", "pos": "RW", "nation": "ENG" },
+      { "name": "Martin Ødegaard", "pos": "CM", "nation": "NOR" },
+      { "name": "Declan Rice", "pos": "DM", "nation": "ENG" },
+      { "name": "William Saliba", "pos": "CB", "nation": "FRA" },
+      { "name": "David Raya", "pos": "GK", "nation": "ESP" }
+    ]
+  },
+  "Man City": {
+    "name": "Man City",
+    "code": "MCI",
+    "strength": 92,
+    "color": "#6cabdd",
+    "manager": "Pep Guardiola",
+    "stadium": "Etihad Stadium",
+    "formation": "4-3-3",
+    "lineup": ["Ederson", "Gvardiol", "Dias", "Akanji", "Walker", "Rodri", "De Bruyne", "Bernardo", "Foden", "Haaland", "Grealish"],
+    "styleVector": [82, 96, 75, 90, 55],
+    "squad": [
+      { "name": "Erling Haaland", "pos": "ST", "nation": "NOR" },
+      { "name": "Rodri", "pos": "DM", "nation": "ESP" },
+      { "name": "Phil Foden", "pos": "RW", "nation": "ENG" },
+      { "name": "Kevin De Bruyne", "pos": "CM", "nation": "BEL" },
+      { "name": "Ederson", "pos": "GK", "nation": "BRA" }
+    ]
+  },
+  "Liverpool": {
+    "name": "Liverpool",
+    "code": "LIV",
+    "strength": 88,
+    "color": "#c8102e",
+    "manager": "Jürgen Klopp",
+    "stadium": "Anfield",
+    "formation": "4-3-3",
+    "lineup": ["Alisson", "Robertson", "Van Dijk", "Konaté", "Alexander-Arnold", "Mac Allister", "Szoboszlai", "Endo", "Díaz", "Núñez", "Salah"],
+    "styleVector": [95, 80, 82, 85, 62],
+    "squad": [
+      { "name": "Mohamed Salah", "pos": "RW", "nation": "EGY" },
+      { "name": "Virgil van Dijk", "pos": "CB", "nation": "NED" },
+      { "name": "Alexis Mac Allister", "pos": "CM", "nation": "ARG" },
+      { "name": "Trent Alexander-Arnold", "pos": "RB", "nation": "ENG" },
+      { "name": "Alisson", "pos": "GK", "nation": "BRA" }
+    ]
+  },
+  "Aston Villa": {
+    "name": "Aston Villa",
+    "code": "AVL",
+    "strength": 80,
+    "color": "#7a003c",
+    "manager": "Unai Emery",
+    "stadium": "Villa Park",
+    "formation": "4-2-3-1",
+    "lineup": ["Martínez", "Digne", "Torres", "Konsa", "Cash", "Kamara", "Luiz", "McGinn", "Tielemans", "Bailey", "Watkins"],
+    "styleVector": [78, 82, 85, 80, 64],
+    "squad": [
+      { "name": "Ollie Watkins", "pos": "ST", "nation": "ENG" },
+      { "name": "Emiliano Martínez", "pos": "GK", "nation": "ARG" },
+      { "name": "Douglas Luiz", "pos": "CM", "nation": "BRA" }
+    ]
+  },
+  "Tottenham": {
+    "name": "Tottenham",
+    "code": "TOT",
+    "strength": 79,
+    "color": "#1c2a6b",
+    "manager": "Ange Postecoglou",
+    "stadium": "Tottenham Hotspur Stadium",
+    "formation": "4-2-3-1",
+    "lineup": ["Vicario", "Udogie", "Van de Ven", "Romero", "Porro", "Bissouma", "Sarr", "Son", "Maddison", "Kulusevski", "Richarlison"],
+    "styleVector": [90, 85, 60, 88, 55],
+    "squad": [
+      { "name": "Son Heung-min", "pos": "LW", "nation": "KOR" },
+      { "name": "James Maddison", "pos": "AM", "nation": "ENG" },
+      { "name": "Cristian Romero", "pos": "CB", "nation": "ARG" }
+    ]
+  },
+  "Newcastle": {
+    "name": "Newcastle",
+    "code": "NEW",
+    "strength": 78,
+    "color": "#241f20",
+    "manager": "Eddie Howe",
+    "stadium": "St James' Park",
+    "formation": "4-3-3",
+    "lineup": ["Pope", "Burn", "Botman", "Schär", "Trippier", "Guimarães", "Joelinton", "Longstaff", "Gordon", "Isak", "Almirón"],
+    "styleVector": [84, 78, 82, 76, 66],
+    "squad": [
+      { "name": "Alexander Isak", "pos": "ST", "nation": "SWE" },
+      { "name": "Bruno Guimarães", "pos": "CM", "nation": "BRA" },
+      { "name": "Kieran Trippier", "pos": "RB", "nation": "ENG" }
+    ]
+  },
+  "Chelsea": {
+    "name": "Chelsea",
+    "code": "CHE",
+    "strength": 77,
+    "color": "#034694",
+    "manager": "Mauricio Pochettino",
+    "stadium": "Stamford Bridge",
+    "formation": "4-2-3-1",
+    "lineup": ["Petrović", "Cucurella", "Silva", "Disasi", "Gusto", "Caicedo", "Enzo", "Sterling", "Gallagher", "Palmer", "Jackson"],
+    "styleVector": [86, 80, 78, 78, 65],
+    "squad": [
+      { "name": "Cole Palmer", "pos": "RW", "nation": "ENG" },
+      { "name": "Moisés Caicedo", "pos": "DM", "nation": "ECU" },
+      { "name": "Enzo Fernández", "pos": "CM", "nation": "ARG" }
+    ]
+  },
+  "Man Utd": {
+    "name": "Man Utd",
+    "code": "MUN",
+    "strength": 74,
+    "color": "#da291c",
+    "manager": "Erik ten Hag",
+    "stadium": "Old Trafford",
+    "formation": "4-2-3-1",
+    "lineup": ["Onana", "Shaw", "Martínez", "Varane", "Dalot", "Casemiro", "Mainoo", "Rashford", "Fernandes", "Garnacho", "Højlund"],
+    "styleVector": [76, 80, 72, 82, 60],
+    "squad": [
+      { "name": "Bruno Fernandes", "pos": "AM", "nation": "POR" },
+      { "name": "Kobbie Mainoo", "pos": "CM", "nation": "ENG" },
+      { "name": "Alejandro Garnacho", "pos": "RW", "nation": "ARG" }
+    ]
+  },
+  "Brighton": {
+    "name": "Brighton",
+    "code": "BHA",
+    "strength": 71,
+    "color": "#0057b8",
+    "manager": "Roberto De Zerbi",
+    "stadium": "Amex Stadium",
+    "formation": "4-2-3-1",
+    "lineup": ["Verbruggen", "Estupiñán", "Dunk", "Van Hecke", "Lamptey", "Gilmour", "Gross", "Mitoma", "Pedro", "Adingra", "Ferguson"],
+    "styleVector": [85, 88, 65, 86, 52],
+    "squad": [{ "name": "Kaoru Mitoma", "pos": "LW", "nation": "JPN" }]
+  },
+  "West Ham": {
+    "name": "West Ham",
+    "code": "WHU",
+    "strength": 70,
+    "color": "#7a263a",
+    "manager": "David Moyes",
+    "stadium": "London Stadium",
+    "formation": "4-2-3-1",
+    "lineup": ["Areola", "Emerson", "Zouma", "Aguerd", "Coufal", "Álvarez", "Souček", "Paquetá", "Ward-Prowse", "Kudus", "Bowen"],
+    "styleVector": [65, 72, 86, 75, 80],
+    "squad": [{ "name": "Jarrod Bowen", "pos": "RW", "nation": "ENG" }]
+  },
+  "Crystal Palace": {
+    "name": "Crystal Palace",
+    "code": "CRY",
+    "strength": 68,
+    "color": "#1b458f",
+    "manager": "Roy Hodgson",
+    "stadium": "Selhurst Park",
+    "formation": "4-2-3-1",
+    "lineup": ["Henderson", "Mitchell", "Guéhi", "Andersen", "Munoz", "Wharton", "Lerma", "Eze", "Hughes", "Olise", "Mateta"],
+    "styleVector": [70, 74, 80, 78, 65],
+    "squad": [{ "name": "Eberechi Eze", "pos": "AM", "nation": "ENG" }]
+  },
+  "Bournemouth": {
+    "name": "Bournemouth",
+    "code": "BOU",
+    "strength": 66,
+    "color": "#b50e12",
+    "manager": "Andoni Iraola",
+    "stadium": "Vitality Stadium",
+    "formation": "4-2-3-1",
+    "lineup": ["Neto", "Kelly", "Senesi", "Zabarnyi", "Smith", "Christie", "Cook", "Sinisterra", "Kluivert", "Semenyo", "Solanke"],
+    "styleVector": [88, 72, 76, 79, 64],
+    "squad": [{ "name": "Dominic Solanke", "pos": "ST", "nation": "ENG" }]
+  },
+  "Fulham": {
+    "name": "Fulham",
+    "code": "FUL",
+    "strength": 65,
+    "color": "#444444",
+    "manager": "Marco Silva",
+    "stadium": "Craven Cottage",
+    "formation": "4-2-3-1",
+    "lineup": ["Leno", "Robinson", "Bassey", "Adarabioyo", "Castagne", "Palhinha", "Reed", "Willian", "Pereira", "Iwobi", "Muniz"],
+    "styleVector": [75, 76, 78, 77, 68],
+    "squad": [{ "name": "Rodrigo Muniz", "pos": "ST", "nation": "BRA" }]
+  },
+  "Brentford": {
+    "name": "Brentford",
+    "code": "BRE",
+    "strength": 65,
+    "color": "#e30613",
+    "manager": "Thomas Frank",
+    "stadium": "Gtech Community",
+    "formation": "3-5-2",
+    "lineup": ["Flekken", "Collins", "Pinnock", "Zanka", "Reguilón", "Janelt", "Nørgaard", "Jensen", "Roerslev", "Wissa", "Toney"],
+    "styleVector": [78, 72, 82, 75, 78],
+    "squad": [{ "name": "Ivan Toney", "pos": "ST", "nation": "ENG" }]
+  },
+  "Wolves": {
+    "name": "Wolves",
+    "code": "WOL",
+    "strength": 64,
+    "color": "#c58b00",
+    "manager": "Gary O'Neil",
+    "stadium": "Molineux",
+    "formation": "3-4-2-1",
+    "lineup": ["Sá", "Toti", "Kilman", "Dawson", "Aït-Nouri", "Gomes", "Lemina", "Semedo", "Sarabia", "Neto", "Cunha"],
+    "styleVector": [75, 75, 76, 80, 60],
+    "squad": [{ "name": "Matheus Cunha", "pos": "ST", "nation": "BRA" }]
+  },
+  "Everton": {
+    "name": "Everton",
+    "code": "EVE",
+    "strength": 62,
+    "color": "#003399",
+    "manager": "Sean Dyche",
+    "stadium": "Goodison Park",
+    "formation": "4-4-1-1",
+    "lineup": ["Pickford", "Mykolenko", "Branthwaite", "Tarkowski", "Coleman", "McNeil", "Gueye", "Garner", "Harrison", "Doucouré", "Calvert-Lewin"],
+    "styleVector": [72, 65, 88, 68, 86],
+    "squad": [{ "name": "Jarrad Branthwaite", "pos": "CB", "nation": "ENG" }]
+  },
+  "Forest": {
+    "name": "Forest",
+    "code": "NFO",
+    "strength": 61,
+    "color": "#c8102e",
+    "manager": "Nuno Espírito Santo",
+    "stadium": "City Ground",
+    "formation": "4-2-3-1",
+    "lineup": ["Sels", "Aina", "Murillo", "Boly", "Williams", "Danilo", "Yates", "Hudson-Odoi", "Gibbs-White", "Elanga", "Awoniyi"],
+    "styleVector": [70, 70, 78, 80, 68],
+    "squad": [{ "name": "Morgan Gibbs-White", "pos": "AM", "nation": "ENG" }]
+  },
+  "Luton": {
+    "name": "Luton",
+    "code": "LUT",
+    "strength": 52,
+    "color": "#f78f1e",
+    "manager": "Rob Edwards",
+    "stadium": "Kenilworth Road",
+    "formation": "3-4-2-1",
+    "lineup": ["Kaminski", "Bell", "Mengí", "Burke", "Doughty", "Barkley", "Clark", "Ogbene", "Chong", "Morris", "Adebayo"],
+    "styleVector": [80, 68, 72, 70, 80],
+    "squad": [{ "name": "Ross Barkley", "pos": "CM", "nation": "ENG" }]
+  },
+  "Burnley": {
+    "name": "Burnley",
+    "code": "BUR",
+    "strength": 50,
+    "color": "#6c1d45",
+    "manager": "Vincent Kompany",
+    "stadium": "Turf Moor",
+    "formation": "4-4-2",
+    "lineup": ["Muric", "Taylor", "Estève", "O'Shea", "Assignon", "Bruun Larsen", "Berge", "Cullen", "Vitinho", "Odobert", "Fofana"],
+    "styleVector": [76, 78, 68, 74, 62],
+    "squad": [{ "name": "Sander Berge", "pos": "CM", "nation": "NOR" }]
+  },
+  "Sheffield Utd": {
+    "name": "Sheffield Utd",
+    "code": "SHU",
+    "strength": 48,
+    "color": "#ee2737",
+    "manager": "Chris Wilder",
+    "stadium": "Bramall Lane",
+    "formation": "3-5-2",
+    "lineup": ["Grbić", "Trusty", "Ahmedhodžić", "Holgate", "Larouci", "Hamer", "Souza", "Arblaster", "Bogle", "Brereton Díaz", "McBurnie"],
+    "styleVector": [72, 64, 76, 68, 78],
+    "squad": [{ "name": "Gustavo Hamer", "pos": "CM", "nation": "NED" }]
+  }
+}
