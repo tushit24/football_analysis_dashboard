@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { useAppStore } from '@/lib/store';
 import { FitRing } from '@/components/FitRing';
@@ -19,8 +19,6 @@ import {
   ArrowLeft,
   Sparkles,
 } from 'lucide-react';
-import playersData from '@/lib/mock/players.json';
-import { findPlayers } from '@/lib/api';
 
 export default function ComparePage() {
   const {
@@ -32,20 +30,6 @@ export default function ComparePage() {
     isInShortlist,
     removeFromShortlist,
   } = useAppStore();
-
-  // If compareList is empty on mount, initialize with the top 2 candidates
-  useEffect(() => {
-    if (compareList.length === 0) {
-      findPlayers(currentBrief).then((matches) => {
-        if (matches.length >= 2) {
-          toggleCompare(matches[0]);
-          toggleCompare(matches[1]);
-        } else if (matches.length === 1) {
-          toggleCompare(matches[0]);
-        }
-      });
-    }
-  }, [compareList.length, currentBrief, toggleCompare]);
 
   const primaryCandidate = compareList[0];
 

@@ -7,6 +7,7 @@ import { useAppStore } from '@/lib/store';
 import { findPlayers } from '@/lib/api';
 import { PlayerMatch } from '@/lib/types';
 import { PlayerCard } from '@/components/PlayerCard';
+import { PlayerDetailModal } from '@/components/PlayerDetailModal';
 import {
   Download,
   GitCompare,
@@ -37,6 +38,7 @@ export default function ResultsPage() {
   const [matches, setMatches] = useState<PlayerMatch[]>([]);
   const [loading, setLoading] = useState(true);
   const [filterRole, setFilterRole] = useState<string>('ALL');
+  const [detailModalMatch, setDetailModalMatch] = useState<PlayerMatch | null>(null);
 
   useEffect(() => {
     let isMounted = true;
@@ -69,12 +71,8 @@ export default function ResultsPage() {
   };
 
   const handleViewDetail = (match: PlayerMatch) => {
+    setDetailModalMatch(match);
     setSelectedPlayerDetail(match);
-    // If not in compare, add it and navigate to compare
-    if (!isInCompare(match.player.id) && compareList.length < 3) {
-      toggleCompare(match);
-    }
-    router.push('/compare');
   };
 
   return (
@@ -340,6 +338,29 @@ export default function ResultsPage() {
           </Link>
         </div>
       )}
+
+      {/* Full Scouting Breakdown Modal */}
+      <PlayerDetailModal
+        match={detailModalMatch}
+        brief={currentBrief}
+        isOpen={Boolean(detailModalMatch)}
+        onClose={() => setDetailModalMatch(null)}
+        isSaved={detailModalMatch ? isInShortlist(detailModalMatch.player.id) : false}
+        onToggleShortlist={() => {
+          if (!detailModalMatch) return;
+          if (isInShortlist(detailModalMatch.player.id)) {
+            removeFromShortlist(detailModalMatch.player.id);
+          } else {
+            addToShortlist(detailModalMatch);
+          }
+        }}
+        isCompared={detailModalMatch ? isInCompare(detailModalMatch.player.id) : false}
+        onToggleCompare={() => {
+          if (detailModalMatch) {
+            toggleCompare(detailModalMatch);
+          }
+        }}
+      />
     </div>
   );
 }
